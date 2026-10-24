@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071d34">
+  <meta name="description" content="HERRECUBI EXPRESS: paquetería, mensajería y gestión de trámites legales e institucionales en El Salvador. Tus trámites en manos expertas.">
+  <title>HERRECUBI EXPRESS | Tus trámites en manos expertas</title>
+  <style>
+    :root{--navy:#071d34;--navy2:#0b3154;--blue:#0879d9;--yellow:#ffd21a;--white:#fff;--pale:#f2f7fb;--ink:#102943;--muted:#587087;--radius:18px;--shadow:0 12px 34px rgba(7,29,52,.12)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+    a{color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,29,52,.97);color:#fff;box-shadow:0 3px 15px #0002}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:.5px;line-height:1.05}
+    .brand-mark{display:grid;place-items:center;background:var(--yellow);color:var(--navy);width:44px;height:44px;border-radius:12px;font-size:25px}
+    .brand strong{display:block;font-size:1.25rem}.brand em{display:block;color:var(--yellow);font-style:normal;font-size:1rem;letter-spacing:2px}
+    nav{display:flex;gap:20px;align-items:center}
+    nav a{text-decoration:none;font-size:.94rem;font-weight:700}
+    nav a:hover{color:var(--yellow)}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border:2px solid transparent;border-radius:999px;padding:12px 19px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s}
+    .btn-yellow{background:var(--yellow);color:var(--navy)}.btn-yellow:hover{background:#ffe36a;transform:translateY(-1px)}
+    .btn-outline{border-color:#ffffffb8;color:#fff;background:transparent}.btn-outline:hover{background:#ffffff18}
+    .menu-btn{display:none;border:1px solid #ffffff66;color:#fff;background:transparent;border-radius:10px;padding:8px 12px;font-size:1.2rem}
+    .hero{color:#fff;background:radial-gradient(circle at 82% 20%,#1d6ca4 0,transparent 32%),linear-gradient(120deg,#061a2e,#0b416c);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:34px;padding:76px 0}
+    .eyebrow{display:inline-block;background:var(--yellow);color:var(--navy);font-weight:900;border-radius:999px;padding:7px 15px;font-size:.88rem}
+    h1{font-size:clamp(2.5rem,5vw,4.4rem);line-height:1.04;letter-spacing:-1.8px;margin:20px 0}
+    h1 span{color:var(--yellow)}
+    .hero p{font-size:1.14rem;color:#e3edf7;max-width:590px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .hero-visual{min-height:340px;position:relative;display:grid;place-items:center}
+    .delivery-card{position:relative;width:min(100%,430px);min-height:300px;border:1px solid #ffffff3d;border-radius:28px;background:linear-gradient(145deg,#ffffff19,#ffffff08);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;text-align:center;box-shadow:0 22px 60px #0003}
+    .delivery-icon{font-size:7rem;line-height:1.2;filter:drop-shadow(0 10px 12px #0004)}
+    .delivery-card h2{margin:8px 0 4px;font-size:1.5rem}.delivery-card p{font-size:1rem;margin:0}
+    .floating{position:absolute;background:#fff;color:var(--navy);border-radius:14px;padding:12px 15px;font-weight:800;box-shadow:var(--shadow)}
+    .floating.one{top:16px;left:-8px}.floating.two{bottom:12px;right:-4px}
+    section{padding:72px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 36px}
+    .section-head .kicker{color:#0b73c9;text-transform:uppercase;font-size:.8rem;letter-spacing:2px;font-weight:900}
+    h2{font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.15;margin:8px 0 12px;color:var(--navy)}
+    .section-head p{color:var(--muted);margin:0}
+    .services{background:var(--pale)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{background:#fff;border-radius:var(--radius);padding:24px;border:1px solid #e0eaf2;box-shadow:0 5px 20px #0b31540a;transition:.2s}
+    .service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .service-icon{width:52px;height:52px;border-radius:15px;background:#e3f2ff;display:grid;place-items:center;font-size:1.65rem;margin-bottom:16px}
+    .service-card h3{margin:0 0 8px;color:var(--navy);font-size:1.13rem}
+    .service-card p{color:var(--muted);margin:0;font-size:.96rem}
+    .service-card a{display:inline-block;margin-top:15px;color:#086fc1;font-weight:800;text-decoration:none}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+    .about-panel{background:var(--navy);color:#fff;border-radius:24px;padding:32px}
+    .about-panel h2{color:#fff}.about-panel p{color:#dce9f5}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+    .check{display:flex;gap:10px;align-items:flex-start;font-weight:700}.check span{color:var(--yellow);font-size:1.25rem}
+    .promise-list{display:grid;gap:16px}
+    .promise{display:flex;gap:14px;align-items:flex-start}
+    .promise-icon{width:46px;height:46px;flex:0 0 46px;border-radius:14px;background:#fff4bf;display:grid;place-items:center;font-size:1.35rem}
+    .promise h3{margin:0 0 3px;font-size:1.05rem}.promise p{margin:0;color:var(--muted)}
+    .steps{background:#f6f9fc}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{background:#fff;padding:25px;border-radius:var(--radius);border:1px solid #e1eaf2}
+    .step-number{display:grid;place-items:center;width:42px;height:42px;background:var(--yellow);color:var(--navy);font-weight:900;border-radius:50%;margin-bottom:14px}
+    .step h3{margin:0 0 7px}.step p{margin:0;color:var(--muted)}
+    .contact{background:linear-gradient(120deg,#071d34,#0b416c);color:#fff}
+    .contact .section-head h2{color:#fff}.contact .section-head p{color:#dce9f5}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+    .contact-box{border:1px solid #ffffff30;background:#ffffff0b;border-radius:22px;padding:28px}
+    .contact-box h3{margin-top:0;font-size:1.3rem}
+    .contact-item{display:flex;gap:12px;margin:17px 0;align-items:flex-start}
+    .contact-item .ico{font-size:1.35rem}
+    .contact-item a{color:#fff;text-decoration:none;font-weight:800}
+    .contact-item small{display:block;color:#c9d9e8}
+    form{display:grid;gap:12px}
+    label{font-size:.9rem;font-weight:700}
+    input,select,textarea{width:100%;border:1px solid #ffffff40;background:#fff;color:var(--ink);padding:13px 14px;border-radius:10px;font:inherit}
+    textarea{min-height:110px;resize:vertical}
+    .form-note{font-size:.8rem;color:#c9d9e8;margin:0}
+    footer{background:#041321;color:#dce6ef;padding:28px 0}
+    .footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    footer p{margin:4px 0;font-size:.9rem}footer a{color:var(--yellow);text-decoration:none}
+    .tiny{font-size:.78rem;color:#a9bac9}
+    @media(max-width:800px){nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:18px 4%;flex-direction:column;align-items:stretch}nav.open{display:flex}.menu-btn{display:block}.nav>.btn{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{padding:55px 0}.hero-visual{min-height:300px}.cards{grid-template-columns:repeat(2,1fr)}.steps-grid{grid-template-columns:1fr}.about-grid{gap:26px}}
+    @media(max-width:520px){section{padding:54px 0}.cards{grid-template-columns:1fr}.checks{grid-template-columns:1fr}.delivery-icon{font-size:5rem}.delivery-card{min-height:260px}.floating.one{left:0}.floating.two{right:0}.hero-actions .btn{width:100%}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#inicio" aria-label="HERRECUBI EXPRESS inicio">
+      <span class="brand-mark">📦</span>
+      <span><strong>HERRECUBI</strong><em>EXPRESS</em></span>
+    </a>
+    <nav id="mainNav">
+      <a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-yellow" href="https://wa.me/50369306024?text=Hola%20HERRECUBI%20EXPRESS%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener">☏ Contáctanos</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">COBERTURA A NIVEL NACIONAL</span>
+        <h1>Tus trámites en <span>manos expertas.</span></h1>
+        <p>Paquetería, mensajería y apoyo en gestiones legales e institucionales en El Salvador. Tú nos indicas qué necesitas; nosotros te orientamos sobre el proceso.</p>
+        <div class="hero-actions">
+          <a class="btn btn-yellow" href="https://wa.me/50369306024?text=Hola%2C%20quiero%20solicitar%20un%20servicio%20con%20HERRECUBI%20EXPRESS." target="_blank" rel="noopener">✉ Solicita tu servicio</a>
+          <a class="btn btn-outline" href="#servicios">Conoce nuestros servicios</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustración de mensajería">
+        <div class="floating one">🚚 Servicio confiable</div>
+        <div class="delivery-card">
+          <div class="delivery-icon">📦 🛵</div>
+          <h2>HERRECUBI EXPRESS</h2>
+          <p>Paquetería · Mensajería · Trámites</p>
+          <p style="margin-top:12px;font-weight:800;color:#ffd21a">EL SALVADOR</p>
+        </div>
+        <div class="floating two">⚡ Atención personalizada</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Lo que hacemos</div><h2>Nuestros servicios</h2><p>Soluciones prácticas para tus diligencias personales y las necesidades de tu empresa.</p></div>
+      <div class="cards">
+        <article class="service-card"><div class="service-icon">⚖️</div><h3>Servicios legales y notariales</h3><p>Apoyo en gestiones documentales, poderes, declaraciones, autorizaciones y coordinación de documentos. Los actos notariales corresponden al profesional autorizado.</p><a href="#contacto">Consultar servicio →</a></article>
+        <article class="service-card"><div class="service-icon">🏢</div><h3>CNR: propiedades y negocios</h3><p>Apoyo con solicitudes de certificaciones, consultas registrales, matrículas y seguimiento de trámites disponibles.</p><a href="#contacto">Consultar servicio →</a></article>
+        <article class="service-card"><div class="service-icon">🚘</div><h3>SERTRACEN / VMT</h3><p>Orientación y diligencias relacionadas con licencias, tarjetas de circulación, traspasos, placas y solvencias, según requisitos vigentes.</p><a href="#contacto">Consultar servicio →</a></article>
+        <article class="service-card"><div class="service-icon">🪪</div><h3>RNPN y documentos personales</h3><p>Apoyo con información y seguimiento de solicitudes relacionadas con DUI, certificaciones y otros documentos personales.</p><a href="#contacto">Consultar servicio →</a></article>
+        <article class="service-card"><div class="service-icon">🧾</div><h3>Hacienda y gestiones institucionales</h3><p>Apoyo administrativo en consultas, solvencias, declaraciones y otros procesos, sujeto a los requisitos de cada institución.</p><a href="#contacto">Consultar servicio →</a></article>
+        <article class="service-card"><div class="service-icon">🤝</div><h3>ISSS / AFP y otras instituciones</h3><p>Apoyo en coordinación de citas, entrega y retiro de documentos, constancias y seguimiento de solicitudes autorizadas.</p><a href="#contacto">Consultar servicio →</a></article>
+        <article class="service-card"><div class="service-icon">📦</div><h3>Mensajería y paquetería</h3><p>Entrega y retiro de documentos y paquetes, con coordinación previa y cobertura según ruta y disponibilidad.</p><a href="#contacto">Cotizar envío →</a></article>
+        <article class="service-card"><div class="service-icon">🏛️</div><h3>Alcaldías y otras instituciones</h3><p>Diligencias, presentación o retiro de documentos y seguimiento administrativo según autorización y normativa aplicable.</p><a href="#contacto">Consultar servicio →</a></article>
+        <article class="service-card"><div class="service-icon">💳</div><h3>Pagos y gestiones administrativas</h3><p>Apoyo en diligencias y recados previamente acordados. Los pagos y depósitos se realizan únicamente con autorización del cliente.</p><a href="#contacto">Consultar servicio →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="container about-grid">
+      <div class="about-panel">
+        <span class="eyebrow">¿Por qué elegirnos?</span>
+        <h2>Tu tiempo es valioso. Nosotros te ayudamos a cuidarlo.</h2>
+        <p>En HERRECUBI EXPRESS buscamos facilitar tus diligencias con comunicación clara, coordinación responsable y atención personalizada.</p>
+        <div class="checks">
+          <div class="check"><span>✓</span> Atención personalizada</div>
+          <div class="check"><span>✓</span> Seguimiento del trámite</div>
+          <div class="check"><span>✓</span> Confidencialidad</div>
+          <div class="check"><span>✓</span> Cobertura nacional según ruta</div>
+          <div class="check"><span>✓</span> Comunicación clara</div>
+          <div class="check"><span>✓</span> Cotización previa</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head" style="text-align:left;margin:0 0 25px"><div class="kicker">Nuestra forma de trabajar</div><h2>Más que un servicio, una solución.</h2><p>Te explicamos qué información necesitamos y coordinamos contigo los siguientes pasos.</p></div>
+        <div class="promise-list">
+          <div class="promise"><div class="promise-icon">💬</div><div><h3>Comunicación directa</h3><p>Consulta por WhatsApp y recibe orientación sobre el servicio que necesitas.</p></div></div>
+          <div class="promise"><div class="promise-icon">🔎</div><div><h3>Seguimiento informado</h3><p>Te mantenemos al tanto de las novedades que podamos confirmar de tu diligencia.</p></div></div>
+          <div class="promise"><div class="promise-icon">🛡️</div><div><h3>Respeto a tus documentos</h3><p>Comparte únicamente la información necesaria y utiliza canales seguros para documentos personales.</p></div></div>
+          <div class="promise"><div class="promise-icon">📋</div><div><h3>Precio acordado previamente</h3><p>Solicita una cotización antes de confirmar. Tasas oficiales, transporte y honorarios pueden cobrarse por separado.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps">
+    <div class="container">
+      <div class="section-head"><div class="kicker">Fácil y práctico</div><h2>¿Cómo solicitar un servicio?</h2><p>Tres pasos para comenzar tu consulta.</p></div>
+      <div class="steps-grid">
+        <article class="step"><div class="step-number">1</div><h3>Escríbenos</h3><p>Cuéntanos qué trámite o entrega necesitas y en qué municipio se realizará.</p></article>
+        <article class="step"><div class="step-number">2</div><h3>Recibe tu cotización</h3><p>Revisamos el alcance, la ruta, los requisitos y los costos aplicables antes de confirmar.</p></article>
+        <article class="step"><div class="step-number">3</div><h3>Coordinamos contigo</h3><p>Confirmamos los siguientes pasos y la forma de seguimiento de tu solicitud.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="section-head"><div class="kicker" style="color:#ffd21a">Estamos para servirte</div><h2>Solicita información o cotiza tu trámite</h2><p>Contáctanos directamente. Elige el número que prefieras para iniciar tu consulta por WhatsApp.</p></div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Información de contacto</h3>
+          <div class="contact-item"><span class="ico">📞</span><div><a href="tel:+50369306024">6930-6024</a><small>Llamadas y WhatsApp</small></div></div>
+          <div class="contact-item"><span class="ico">📞</span><div><a href="tel:+50364617828">6461-7828</a><small>Llamadas y WhatsApp</small></div></div>
+          <div class="contact-item"><span class="ico">✉️</span><div><a href="mailto:herrecubiexpress@gmail.com">herrecubiexpress@gmail.com</a><small>Correo electrónico</small></div></div>
+          <div class="contact-item"><span class="ico">📍</span><div><strong>Colonia Villa Tzu-Chi, Cantón Ateos</strong><small>Sacacoyo, La Libertad Oeste, El Salvador</small></div></div>
+          <p style="color:#dce9f5">Cobertura nacional según tipo de servicio, ruta y disponibilidad.</p>
+          <a class="btn btn-yellow" style="width:100%;margin-top:8px" href="https://wa.me/50369306024?text=Hola%20HERRECUBI%20EXPRESS%2C%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener">Abrir WhatsApp</a>
+        </div>
+        <div class="contact-box">
+          <h3>Prepara tu consulta</h3>
+          <form id="quoteForm">
+            <div><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" placeholder="Escribe tu nombre" required></div>
+            <div><label for="servicio">Servicio que necesitas</label><select id="servicio" name="servicio" required><option value="">Selecciona un servicio</option><option>Trámite legal o documental</option><option>CNR: propiedades o negocios</option><option>SERTRACEN / VMT</option><option>RNPN / documentos personales</option><option>Hacienda / gestión institucional</option><option>ISSS / AFP</option><option>Mensajería o paquetería</option><option>Otro servicio</option></select></div>
+            <div><label for="municipio">Municipio o lugar</label><input id="municipio" name="municipio" placeholder="Ej. Sacacoyo, Santa Tecla" required></div>
+            <div><label for="detalle">Detalles de la consulta</label><textarea id="detalle" name="detalle" placeholder="Cuéntanos brevemente qué necesitas. No incluyas contraseñas ni datos personales sensibles."></textarea></div>
+            <button class="btn btn-yellow" type="submit">Enviar consulta por WhatsApp</button>
+            <p class="form-note">Este formulario prepara un mensaje en WhatsApp; no almacena ni envía datos a un servidor.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container footer-row">
+    <div><div class="brand"><span class="brand-mark">📦</span><span><strong>HERRECUBI</strong><em>EXPRESS</em></span></div><p>Tus trámites en manos expertas.</p></div>
+    <div><p><strong>Paquetería · Mensajería · Trámites</strong></p><p class="tiny">La disponibilidad, requisitos y tarifas se confirman antes de cada servicio.</p><p class="tiny">© <span id="year"></span> HERRECUBI EXPRESS. Todos los derechos reservados.</p></div>
+  </div>
+</footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const mainNav=document.getElementById('mainNav');
+  menuBtn.addEventListener('click',()=>{const opened=mainNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(opened));});
+  mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mainNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  document.getElementById('quoteForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const nombre=document.getElementById('nombre').value.trim();
+    const servicio=document.getElementById('servicio').value;
+    const municipio=document.getElementById('municipio').value.trim();
+    const detalle=document.getElementById('detalle').value.trim();
+    const message=`Hola HERRECUBI EXPRESS. Mi nombre es ${nombre}. Deseo consultar sobre: ${servicio}. Lugar: ${municipio}. Detalles: ${detalle || 'Quisiera más información.'}`;
+    window.open('https://wa.me/50369306024?text='+encodeURIComponent(message),'_blank','noopener');
+  });
+</script>
+</body>
+</html>
